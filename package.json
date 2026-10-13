@@ -1,0 +1,51 @@
+{
+  "name": "openclaw-token-speed-footer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Official per-turn usage and wall-clock throughput for Telegram, with a preview-safe host bridge.",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./formatter": "./footer.js",
+    "./preview-footer": "./preview-footer.js"
+  },
+  "peerDependencies": {
+    "openclaw": "2026.10.1"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ],
+    "compat": {
+      "pluginApi": ">=2026.10.1",
+      "minGatewayVersion": "2026.10.1"
+    }
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check index.js && node --check footer.js && node --check preview-footer.js && node --check registration.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnklpz/openclaw-token-speed-footer.git"
+  },
+  "homepage": "https://github.com/cnklpz/openclaw-token-speed-footer#readme",
+  "bugs": {
+    "url": "https://github.com/cnklpz/openclaw-token-speed-footer/issues"
+  },
+  "files": [
+    "index.js",
+    "footer.js",
+    "preview-footer.js",
+    "preview-footer.d.ts",
+    "registration.js",
+    "openclaw.plugin.json",
+    "README.md",
+    "HOST-COMPATIBILITY.md",
+    "LICENSE"
+  ]
+}

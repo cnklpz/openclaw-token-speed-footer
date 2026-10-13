@@ -1,0 +1,26 @@
+{
+  "id": "token-speed-footer",
+  "name": "Token & Speed Footer",
+  "description": "Appends OpenClaw's official per-turn token usage and honest wall-clock output speed to Telegram final replies.",
+  "version": "0.1.0",
+  "categories": ["productivity"],
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": { "type": "boolean", "default": true },
+      "deliveryMode": { "type": "string", "enum": ["legacy-final", "preview-safe"], "default": "legacy-final" },
+      "showInput": { "type": "boolean", "default": true },
+      "showOutput": { "type": "boolean", "default": true },
+      "showCache": { "type": "boolean", "default": true },
+      "showTotal": { "type": "boolean", "default": true },
+      "showSpeed": { "type": "boolean", "default": true },
+      "showDuration": { "type": "boolean", "default": true },
+      "showModel": { "type": "boolean", "default": false },
+      "footerPrefix": { "type": "string", "maxLength": 64, "default": "🧮" }
+    }
+  }
+}
